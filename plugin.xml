@@ -13,6 +13,31 @@
         <clobbers target="window.OCRPlugin" />
     </js-module>
     
+    <!-- android -->
+    <platform name="android">
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="com.jcesarmobile.OCRPlugin">
+                <param name="android-package" value="com.jcesarmobile.OCRPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/OCRPlugin.java" target-dir="src/de/neofonie/cordova/plugin/ocrplugin"/>
+        
+        <!--
+        <source-file src="src/android/NativeAudioAsset.java" target-dir="src/de/neofonie/cordova/plugin/nativeaudio"/>
+        <source-file src="src/android/NativeAudioAssetComplex.java" target-dir="src/de/neofonie/cordova/plugin/nativeaudio"/>
+        
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+        </config-file>
+        -->
+
+    </platform>
+
+
     <!-- ios -->
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
@@ -21,10 +46,10 @@
             </feature>
         </config-file>
         
-        <header-file src="src/claseAuxiliar.h" target-dir="." />
-        <source-file src="src/claseAuxiliar.mm" target-dir="." />
-        <header-file src="src/OCRPlugin.h" target-dir="." />
-        <source-file src="src/OCRPlugin.m" target-dir="." />
+        <header-file src="src/ios/claseAuxiliar.h" target-dir="." />
+        <source-file src="src/ios/claseAuxiliar.mm" target-dir="." />
+        <header-file src="src/ios/OCRPlugin.h" target-dir="." />
+        <source-file src="src/ios/OCRPlugin.m" target-dir="." />
 <!--
         <source-file src="dependencies/include/leptonica/allheaders.h" target-dir="dependencies/include/leptonica" />
         <source-file src="dependencies/include/leptonica/alltypes.h" target-dir="dependencies/include/leptonica" />

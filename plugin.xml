@@ -22,7 +22,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/OCRPlugin.java" target-dir="src/de/neofonie/cordova/plugin/ocrplugin"/>
+        <source-file src="src/android/OCRPlugin.java" target-dir="."/>
         
         <!--
         <source-file src="src/android/NativeAudioAsset.java" target-dir="src/de/neofonie/cordova/plugin/nativeaudio"/>
